@@ -1,4 +1,6 @@
 # Specify the file to read from
+# Author : David Hui
+# Date : 12/1/2017
 
 location = input ("Enter the folder name (including the full path) of the source file : ")
 fileName = input ( "\nEnter the file name : ")

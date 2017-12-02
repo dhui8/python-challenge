@@ -1,3 +1,6 @@
+# Author : David Hui
+# Date : 12/1/2017
+
 import os
 import csv
 # Specify the file to read from
