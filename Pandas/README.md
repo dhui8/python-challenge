@@ -1,6 +1,10 @@
 
 
 ```python
+# David Hui
+# Dec 9th 2017
+
+
 import pandas as pd
 ```
 
@@ -541,12 +545,136 @@ merged_df = pd.merge(merged_df, PassedReadingBySchool_df, on="school")
 
 merged_df.reset_index(inplace=True)
 merged_df = pd.merge(merged_df, PassedMathBySchool, on="school")
+merged_df.head()
 ```
 
 
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>level_0</th>
+      <th>index</th>
+      <th>school</th>
+      <th>Student ID</th>
+      <th>reading_score</th>
+      <th>math_score</th>
+      <th>School ID</th>
+      <th>size</th>
+      <th>budget</th>
+      <th>Avg Math Score</th>
+      <th>Avg Reading Score</th>
+      <th>Total # of Students Pass Reading</th>
+      <th>Total # of Students Pass Math</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>Bailey High School</td>
+      <td>101303896</td>
+      <td>403225</td>
+      <td>383393</td>
+      <td>7</td>
+      <td>4976</td>
+      <td>3124928</td>
+      <td>77.048432</td>
+      <td>81.033963</td>
+      <td>4705</td>
+      <td>3877</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>Cabrera High School</td>
+      <td>31477307</td>
+      <td>156027</td>
+      <td>154329</td>
+      <td>6</td>
+      <td>1858</td>
+      <td>1081356</td>
+      <td>83.061895</td>
+      <td>83.975780</td>
+      <td>1858</td>
+      <td>1858</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>2</td>
+      <td>Figueroa High School</td>
+      <td>12949059</td>
+      <td>239335</td>
+      <td>226223</td>
+      <td>1</td>
+      <td>2949</td>
+      <td>1884411</td>
+      <td>76.711767</td>
+      <td>81.158020</td>
+      <td>2788</td>
+      <td>2276</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>3</td>
+      <td>Ford High School</td>
+      <td>99055935</td>
+      <td>221164</td>
+      <td>211184</td>
+      <td>13</td>
+      <td>2739</td>
+      <td>1763916</td>
+      <td>77.102592</td>
+      <td>80.746258</td>
+      <td>2571</td>
+      <td>2142</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>4</td>
+      <td>Griffin High School</td>
+      <td>19077394</td>
+      <td>123043</td>
+      <td>122360</td>
+      <td>4</td>
+      <td>1468</td>
+      <td>917500</td>
+      <td>83.351499</td>
+      <td>83.816757</td>
+      <td>1468</td>
+      <td>1468</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
 ```python
-merged_df["% Passing Reading"] = merged_df["Total # of Students Pass Reading"] / merged_df["size"] * 100
-merged_df["% Passing Math"] = merged_df["Total # of Students Pass Math"] / merged_df["size"] * 100
+merged_df["% Passing Reading"] = (merged_df["Total # of Students Pass Reading"] / merged_df["size"]) * 100
+merged_df["% Passing Math"] = (merged_df["Total # of Students Pass Math"] / merged_df["size"]) * 100
 
 merged_df.rename(columns={"budget":"Total School Budget"}, inplace=True)
 merged_df["Per Student Budget"] = merged_df["Total School Budget"] / merged_df["size"]
@@ -1181,7 +1309,7 @@ merged_math_score_df.head()
       <td>10th</td>
       <td>1239</td>
       <td>95399</td>
-      <td>77.00%</td>
+      <td>76.996772</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1189,7 +1317,7 @@ merged_math_score_df.head()
       <td>11th</td>
       <td>1251</td>
       <td>96972</td>
-      <td>77.52%</td>
+      <td>77.515588</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1197,7 +1325,7 @@ merged_math_score_df.head()
       <td>12th</td>
       <td>1028</td>
       <td>78634</td>
-      <td>76.49%</td>
+      <td>76.492218</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1205,7 +1333,7 @@ merged_math_score_df.head()
       <td>9th</td>
       <td>1458</td>
       <td>112388</td>
-      <td>77.08%</td>
+      <td>77.083676</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1213,7 +1341,7 @@ merged_math_score_df.head()
       <td>10th</td>
       <td>466</td>
       <td>38750</td>
-      <td>83.15%</td>
+      <td>83.154506</td>
     </tr>
   </tbody>
 </table>
@@ -1770,7 +1898,7 @@ final_df["% Passing Math"] = final_df["% Passing Math"].map("{0:,.2f}%".format)
 final_df["% Passing Reading"] = final_df["% Passing Reading"].map("{0:,.2f}%".format)
 final_df["Overall Passing Rate"] = final_df["Overall Passing Rate"].map("{0:,.2f}%".format)
 
-final_df.head()
+#final_df.head()
 ```
 
     C:\Users\MH\Anaconda3\lib\site-packages\ipykernel_launcher.py:8: SettingWithCopyWarning: 
@@ -1804,73 +1932,6 @@ final_df.head()
     See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
       if sys.path[0] == '':
     
-
-
-
-
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Avg Math Score</th>
-      <th>Avg Reading Score</th>
-      <th>% Passing Math</th>
-      <th>% Passing Reading</th>
-      <th>Overall Passing Rate</th>
-    </tr>
-    <tr>
-      <th>Size</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Small</th>
-      <td>83.50%</td>
-      <td>83.88%</td>
-      <td>100.00%</td>
-      <td>100.00%</td>
-      <td>100.00%</td>
-    </tr>
-    <tr>
-      <th>Medium</th>
-      <td>78.43%</td>
-      <td>81.77%</td>
-      <td>83.28%</td>
-      <td>95.72%</td>
-      <td>89.50%</td>
-    </tr>
-    <tr>
-      <th>Large</th>
-      <td>78.43%</td>
-      <td>81.77%</td>
-      <td>83.28%</td>
-      <td>95.72%</td>
-      <td>89.50%</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
 
 
 ```python
@@ -1951,11 +2012,11 @@ final_df.loc["District","% Passing Reading"] = districtPertReadingScore
 districtOverAllScore = (School_Type_df["Overall Passing Rate"].loc[School_Type_df["School Type"] == "District"].sum() / charterCount) * 100
 final_df.loc["District","Overall Passing Rate"] = districtOverAllScore
 
-final_df["Avg Math Score"] = final_df["Avg Math Score"].map("{0:,.2f}%".format)
-final_df["Avg Reading Score"] = final_df["Avg Reading Score"].map("{0:,.2f}%".format)
-final_df["% Passing Math"] = final_df["% Passing Math"].map("{0:,.2f}%".format)
-final_df["% Passing Reading"] = final_df["% Passing Reading"].map("{0:,.2f}%".format)
-final_df["Overall Passing Rate"] = final_df["Overall Passing Rate"].map("{0:,.2f}%".format)
+final_df["Avg Math Score"] = (final_df["Avg Math Score"]*100).map("{0:,.2f}%".format)
+final_df["Avg Reading Score"] = (final_df["Avg Reading Score"]*100).map("{0:,.2f}%".format)
+final_df["% Passing Math"] = (final_df["% Passing Math"]*100).map("{0:,.2f}%".format)
+final_df["% Passing Reading"] = (final_df["% Passing Reading"]*100).map("{0:,.2f}%".format)
+final_df["Overall Passing Rate"] = (final_df["Overall Passing Rate"]*100).map("{0:,.2f}%".format)
 
 final_df.head()
 ```
@@ -1999,19 +2060,19 @@ final_df.head()
   <tbody>
     <tr>
       <th>Charter</th>
-      <td>0.83%</td>
-      <td>0.84%</td>
-      <td>1.00%</td>
-      <td>1.00%</td>
-      <td>1.00%</td>
+      <td>83.47%</td>
+      <td>83.90%</td>
+      <td>100.00%</td>
+      <td>100.00%</td>
+      <td>100.00%</td>
     </tr>
     <tr>
       <th>District</th>
-      <td>0.67%</td>
-      <td>0.71%</td>
-      <td>0.68%</td>
-      <td>0.83%</td>
-      <td>0.75%</td>
+      <td>67.34%</td>
+      <td>70.84%</td>
+      <td>68.08%</td>
+      <td>82.64%</td>
+      <td>75.36%</td>
     </tr>
   </tbody>
 </table>
