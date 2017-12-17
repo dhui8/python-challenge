@@ -2079,3 +2079,17 @@ final_df.head()
 </div>
 
 
+
+
+```python
+#################################################################################
+###
+### Three obeervations :
+###
+### 1. Charter schools have 100% passing rate for Reading 
+### 2. Charter schools have 100% passing rate for Math 
+### 3. Higher budget spends on student does not always guarantee a 100 % result
+###
+###
+##################################################################################. 
+```
