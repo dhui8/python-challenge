@@ -1,0 +1,37 @@
+.box {
+  min-height: 80px;
+  padding: 5px;
+  margin: 5px;
+  font-weight: 800;
+  color:#FFF;
+}
+
+.gentleGreen {
+  background:#096;
+
+}
+
+.bodyBgColor {
+	background:#EAEAEA;
+}
+
+.navbarBgColor {
+	background:#0C6;
+}
+
+.navbarText {
+	font-size:28px;
+	width:140px;
+	height:60px;
+	padding-left:20px;
+	padding-top:9px;
+	
+}
+
+.textColor {
+	color:white;
+}
+
+.noMargin {
+	margin: 0 0 0 0;
+}
