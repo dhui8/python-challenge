@@ -1,0 +1,97 @@
+<!-- David Hui -->
+<!-- Landing page -->
+<!-- 02/09/2018 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Visualization</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style_comp.css">
+  
+</head>
+
+<body class="bodyBgColor">
+
+
+	<div class="navbar navbar-default navbar-static-top">
+
+		<div class="container">
+        	<div class="navbar-text navbarBgColor navbarTextBox navbarHeight noMargin">
+              <span class="textColor" >Latitude</span>
+            </div>
+  			<button class="navbar-toggle"  data-toggle="collapse" data-target=".navbarNavAltMarkup">
+    			<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+  			</button>
+
+			<div class="collapse navbar-collapse navbarNavAltMarkup">
+				<ul class="nav navbar-nav navbar-right">
+
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Plot<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="visualization_temp.html">Max Temperature</a></li>
+                      <li><a href="visualization_humd.html">Humidity</a></li>
+                      <li><a href="visualization_cloudiness.html">Cloudiness</a></li>
+                      <li><a href="visualization_windSpeed.html">Wind Speed</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="comparison.html">Comparison</a></li>
+                  <li><a href="data.html">Data</a></li>
+                </ul>
+			</div>
+        </div>
+
+	</div>
+	<div class="container">
+		<div class="row">
+	
+			<div class="box2">
+				<h2 class="titleText">Comparison Latitude vs. X</h2>
+				<hr>
+				<h5 >Click any plot to get an in-depth analysis.</h5>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+							<span><h3 class="titleText text_center text_size">vs. Max Temperature</h3></span>
+							<a href="visualization_temp.html"><img class="img-responsive" src="temperature.png"></a>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+							<span><h3 class="titleText text_center text_size">vs. Humidity</h3></span>
+							<a href="visualization_humd.html"><img class="img-responsive" src="humidity.png"></a>
+						</div>
+
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+							<span><h3 class="titleText text_center text_size">vs. Cloudiness</h3></span>
+							<a href="visualization_cloudiness.html"><img class="img-responsive" src="cloudiness.png"></a>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+							<span><h3 class="titleText text_center text_size">vs. Wind Speed</h3></span>
+							<a href="visualization_windSpeed.html"><img class="img-responsive" src="wind_speed.png"></a>
+						</div>
+					</div>
+				</div>
+					
+			</div>
+			
+ 
+		</div>
+		<div class="row">
+			<div>
+				&nbsp;
+			</div>
+		</div>	
+
+	</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

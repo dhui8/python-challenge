@@ -1,0 +1,193 @@
+/*	David Hui
+	02/10/2018
+	This CSS file is ONLY used by Visualization page.
+*/
+
+.box {
+  min-height: 180px;
+  padding: 5px;
+  margin: 5px;
+  font-weight: 800;
+  color:#fff;
+}
+.box1 {
+  min-height: 50px;
+  padding: 5px;
+  margin: 5px;
+  font-weight: 600;
+  background: white;
+  
+}
+.box2 {
+  min-height: 100px;
+  padding: 15px;
+  margin: 5px;
+  font-weight: 600;
+  background: white;
+}
+
+.titleText {
+  color:#096;
+  padding-left: 10px;
+  font-weight: 700;
+
+}
+.purple {
+  background: rebeccapurple;
+}
+.skyblue {
+  background: deepskyblue;
+}
+
+.bodyBgColor {
+	background:#EAEAEA;
+}
+
+.navbarBgColor {
+	background:#0C6;
+}
+
+.navbarTextBox {
+	font-size:26px;
+	width:140px;
+	padding-left:24px;
+	padding-top:15px;
+
+}
+
+.navbarHeight {
+	height:70px;
+}
+.textColor {
+	color:white;
+}
+
+.noMargin {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 20;
+	margin-right: 0;
+}
+
+.img_center {
+	text-align:center;
+}
+
+.omg_left {
+	float:left;
+}
+
+.lg_img{
+	
+	width:105%;
+}
+
+.md_img{
+	
+	width:76%;
+}
+
+.sm_img{
+	width: 80%;
+	margin-left:0;
+	margin-right:0;
+	float:left;
+
+}
+
+.floatLeft {
+	float:left;
+}
+
+.paddingTop {
+	padding-top:15px;
+}
+
+.paddingRight {
+	padding-right:10px;
+}
+
+
+div.col-lg-6.lg_divcolWidth{
+	width:14%;
+}
+
+div.col-md-6.lg_divcolWidth.md_divcolWidth{
+	width:30%;
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+     /* start of large tablet styles */
+     .img-responsive {
+       width: 60%;
+     }
+	 
+	div.col-lg-6.lg_divcolWidth {
+		width:50%;
+	 }
+}
+
+@media screen and (max-width: 767px) {
+     /* start of medium tablet styles */
+     /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
+     .img-responsive {
+       width: 50%;
+     }
+	 
+	 /*div.col-lg-6.lg_divcolWidth {
+		width:80%;
+	 }*/
+}
+@media screen and (min-width: 550 px) {
+     /* start of medium tablet styles */
+     /* Adding a fixed/percentage min-width could ensure that the image doesn't get too small */
+     .img-responsive {
+       width: 50%;
+     }
+	 
+	  div.col-lg-6.lg_divcolWidth {
+		width:50%;
+	 }
+}
+
+@media screen and (max-width: 479px) {
+     /* start of phone styles */
+     /* It's possible to hide the image if the screen becomes too small */
+     .img-responsive {
+       width: 40%;
+     }
+	 
+	 div.col-lg-6.lg_divcolWidth {
+		width:50%;
+	 }
+	 
+}
+
+@media screen and (max-width: 400px) {
+     /* start of phone styles. THis is also the smallest size */
+     /* It's possible to hide the image if the screen becomes too small */
+     .img-responsive {
+       width: 50%;
+     }
+	 
+	 div.col-lg-6.lg_divcolWidth {
+		width:50%;
+	 }
+	 
+}
+
+@media screen and (max-width: 300px) {
+     /* start of phone styles */
+     /* It's possible to hide the image if the screen becomes too small */
+     .img-responsive {
+       width: 40%;
+     }
+	 
+	 div.col-lg-6.lg_divcolWidth {
+		width:40%;
+	 }
+	 
+}

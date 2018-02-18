@@ -8,10 +8,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Landing</title>
+  <title>Visualization</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style_index.css">
+  <link rel="stylesheet" href="style_visual.css">
   
 </head>
 
@@ -51,67 +51,48 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-lg-8">
 				<div class="box1">
-					<h2 class="titleText">Summary Latitude vs. X</h2>
+					<h2 class="titleText">Max Temperature</h2>
 					<hr>
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-1 col-xs-2 col-xs-3 col-xs-4" style="width:20%">	
-								<div class="img_left;">
-									<img class="lg_img paddingTop " src="temperature.png">
-								</div>
-							</div>
-							<div class="col-xs-5" >
-								<p style="padding-top:20px; padding-left:-22px;"> 
-									The purpose of this project was to analyze how weather changes as you get closer to the equator.  To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-								</p>
-								<p style="padding-top:10px; padding-left:-22px;">
-									After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: 
-								</p>
-
-							</div>
-						</div>
-						<div class="row">
-
-							<div class="col-sm-7">
-								<p style="padding-bottom:20px"> 
-									temperature, cludiness, wind speed, and humidity. This site provide the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and coorelations witnessed.
-																 
-								</p>
-
-							</div>
-						</div>						
+					<div class="img_center">
+						<img class="md_img paddingTop" src="temperature.png">
+					</div>
+					<div>
+					<p style="padding-top:40px; padding-left:20px; padding-right:20px; padding-bottom:60px"> 
+					As expected, the weather becomes signifcantly warmer as one approaches the equator (0 Deg. Latitude). More interestingly, however, is the fact that the southern hemisphere tends to be wamer this time of year than northern hemisphere. This may be due to the tilt of the earth at the time of the year this data was gathered.
+					</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="col-md-4">
+			<div class="col-lg-4">
 				<!-- div class="box1 purple">this is test col-md-4</div-->
 				<div class="box2">
-					<h2 class="titleText">Visualizations</h2>
+					<h2 class="titleText">Visualization</h2>
 					<hr>
-					<!--div class="container rowcolWidth">
-						<div class="row divcolWidth"-->
-					<div class="container rowcolWidth">
-						<div class="row divcolWidth lg_divcolWidth md_divcolWidth sm_divcolWidth xs_divcolWidth">
-							<div class=" col-xs-1 col-md-6 col-lg-6 xs_divcolWidth" >
-					
-								<a href="visualization_temp.html"><img class="sm_img" src="temperature.png" ></a>
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 lg_divcolWidth">
+								<a href="visualization_temp.html"><img class="img-responsive" src="temperature.png"></a>
 							</div>
-							<div class=" col-xs-1 col-md-6 col-lg-6 xs_divcolWidth" >
-								<a href="visualization_humd.html"><img class="sm_img" src="humidity.png"></a>
-							</div>
-
-							<div class=" col-xs-1 col-md-6 col-lg-6 xs_divcolWidth" >
-								<a href="visualization_cloudiness.html"><img class="sm_img" src="cloudiness.png"></a>
-							</div>
-							<div class=" col-xs-1 col-md-6 col-lg-6 xs_divcolWidth" >
-								<a href="visualization_windSpeed.html"><img class="sm_img" src="wind_speed.png"></a>
-							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 lg_divcolWidth">
+								<a href="visualization_humd.html"><img class="img-responsive" src="humidity.png"></a>
 							</div>
 						</div>
-
+						<div class="row">
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 lg_divcolWidth">
+								<a href="visualization_cloudiness.html"><img class="img-responsive" src="cloudiness.png"></a>
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 lg_divcolWidth">
+								<a href="visualization_windSpeed.html"><img class="img-responsive" src="wind_speed.png"></a>
+							</div>
+						</div>
+						<div class="row">
+							<div>
+							&nbsp;
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
